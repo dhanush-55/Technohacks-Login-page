@@ -1,0 +1,63 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body
+         { 
+         font-family: Arial, sans-serif; 
+         background-color:white
+         }
+        .container 
+        { 
+        background-color:lightgray;
+        width: 400px; 
+        margin: 200px auto; 
+        padding: 10px; 
+        border: 1px black; 
+        border-radius:15px;
+        box-shadow:1px 1px 1px;
+        }
+        input[type="text"], input[type="password"] { width: 100%; padding: 8px; margin: 10px 0; 
+        }
+        button
+         { 
+         padding: 10px 20px;
+          background-color:green;
+           color: white; 
+           border: none; 
+           cursor: pointer; 
+           border-radius:10px;
+        }
+        button:hover { 
+        background-color: green; 
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <form action="/login" method="post">
+             <h2 align="center">Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button onclick="fun()">Login</button>
+        </form>
+    </div>
+    <script>
+        function fun(){
+     var username=
+    document.getElementById('username').value;
+    var password =   
+    document.getElementById('password').value;
+    if (username === "" || password === "") {
+        alert("Both username and password are required!");
+    } else 
+    {
+        alert("Successfully login!");
+    }
+};
+    </script>
+</body>
+</html>
